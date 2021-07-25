@@ -272,12 +272,14 @@ p > img {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
 
-  a:hover {
-    color: $omar;
-  }
-
   @include mobile {
     text-align: center;
+  }
+}
+
+.masthead-pages{
+    a:hover {
+    color: $omar;
   }
 }
 
