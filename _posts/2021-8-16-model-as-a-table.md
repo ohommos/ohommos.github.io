@@ -1,24 +1,25 @@
 ---
 layout: post
-title: This post demonstrates post content styles
-categories: Miscellaneous
+title: Representing Model-as-a-Table (Maat)
+categories: Data Science
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+Depending on how old or modern a company's infra is, Data Scientists might be fairly limited in what models can put in production. More often than you'd expect, they lack the luxury of exporting and productionizing the model as an artifact e.g. a pickle or protobuf.
+
+One popular way of overcoming this is, after training your model somewhere, extracting the parameters of the trained model, transporting it to a production system, and unpacking it in a skeleton written in some production language. Skeleton + params = model. Some chance of inconsistencies with this process, but at least it's something. This is generally easy for linear models; since their equations (the skeleton) are straight-forward to write from scratch in any language. A bit more complex for simple time-series models, and much more complex for more advanced things, like neural networks, random foreset, XGBoost, etc..
+
+TODO add ref to booking/adyen articles/videos.
+
 
 ## Some great heading (h2)
 
 Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.
-
-Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
 
 ## Another great heading (h2)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
 
 ### Some great subheading (h3)
-
-Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.
 
 Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.
 
@@ -34,14 +35,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eg
 
 Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.
 
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
+```python
+def nyan():
+  pass
 ```
 
 
